@@ -1,0 +1,23 @@
+﻿using DocumentFormat.OpenXml.Spreadsheet;
+using JwtAuthDemo.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using Microsoft.Identity.Client;
+
+namespace JwtAuthDemo.Data
+{
+    public class ApplicationDBContext : DbContext
+    {
+        
+        
+        public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : base(options) 
+        {
+
+        }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Product> Products { get; set; }
+
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
+
+    }
+}
