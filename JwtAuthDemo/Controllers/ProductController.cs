@@ -17,8 +17,8 @@ namespace JwtAuthDemo.Controllers
             _context = context;
         }
 
-        [HttpGet]
-        public ActionResult GetProduct() 
+        [HttpGet("GetProducts")]
+        public ActionResult GetProducts() 
         {
             var products = _context.Products.ToList();
             return Ok(products);
@@ -36,12 +36,12 @@ namespace JwtAuthDemo.Controllers
                 return Ok(product);
             }
         }
-        [HttpPost("GetProducts")]
-        public ActionResult GetProducts()
-        {
-            var products = _context.Products.ToList();
-            return Ok(products);
-        }
+        //[HttpPost("GetProducts")]
+        //public ActionResult GetProducts()
+        //{
+        //    var products = _context.Products.ToList();
+        //    return Ok(products);
+        //}
 
         //[HttpPost]
         //public IActionResult CreateProduct([FromBody] ProductController product)
