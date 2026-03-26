@@ -18,7 +18,7 @@ namespace JwtAuthDemo.Controllers
         }
 
         [HttpGet("GetProducts")]
-        public ActionResult GetProducts() 
+        public IActionResult GetProducts() 
         {
             var products = _context.Products.ToList();
             return Ok(products);
