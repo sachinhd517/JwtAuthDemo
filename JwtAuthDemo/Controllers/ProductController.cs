@@ -7,7 +7,7 @@ namespace JwtAuthDemo.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class ProductController : ControllerBase
     {
         private readonly ApplicationDBContext _context;
